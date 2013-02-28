@@ -14,16 +14,16 @@
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-    var pop = Popcorn("#video");
+    var pop1 = Popcorn("#video");
     
-	pop.footnote({
+	pop1.footnote({
 		start:'1', // Our start time in seconds
 		end:'6', // Our end time in seconds
 		text:"Hello world!", // The text we want to display
 		target:'box', // What DOM element we want to target on the page
 	});
 
-	pop.image({
+	pop1.image({
 		start:'6.1', // Our start time in seconds
 		end:'9', // Our end time in seconds
 		src: "img/cat.jpg",
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		/* applyclass: "flip, black, move_down", // Specify which CSS class */
 	});
 
-	pop.image({
+	pop1.image({
 		start:'9.1', // Our start time in seconds
 		end:'12', // Our end time in seconds
 		src: "img/cat.jpg",
@@ -41,17 +41,17 @@ document.addEventListener("DOMContentLoaded", function () {
 		/* applyclass: "flip, black, move_down", // Specify which CSS class */
 	});
 
-	pop.googlemap({
+	pop1.googlemap({
 		start: 13,
 		end: 19,
 		type: "ROADMAP",
 		target: "box",
-		lat: 43.665429,
-		lng: -79.403323,
+		lat: -27.916767,
+		lng: 31.157227,
 		zoom: 5,
-	});
-
-	pop.webpage({
+		})		
+/*
+	pop1.webpage({
 		id: "webpages-a",
 		start: 19.1,
 		end: 25,
@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		target: "container"
 	});
 
-});
+}); */
 </script>
 </head>
 
@@ -74,8 +74,8 @@ document.addEventListener("DOMContentLoaded", function () {
 	
 <!--The Video-->		
 
-		<video id="video" controls>
-  			<source src="video/Intro_RoughCut.mp4">
+		<video id="video" controls width= "600px">
+  			<source src="video/Main_Video/Intro_part1.mov">
   	
 		</video>
 
