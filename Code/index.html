@@ -14,80 +14,171 @@
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-    var pop1 = Popcorn("#video");
-    
-	pop1.footnote({
-		start:'1', // Our start time in seconds
-		end:'6', // Our end time in seconds
-		text:"Hello world!", // The text we want to display
-		target:'box', // What DOM element we want to target on the page
-	});
+    var pop = Popcorn("#video");
 
-	pop1.image({
-		start:'6.1', // Our start time in seconds
+pop.image({
+		start:'6.25', // Our start time in seconds
 		end:'9', // Our end time in seconds
-		src: "img/cat.jpg",
+		src: "assets/Horn_Video/china.png",
 		target:'box', // What DOM element we want to target on the page
 		effect: "applyclass", // Apply a CSS class to the target container
-		/* applyclass: "flip, black, move_down", // Specify which CSS class */
 	});
-
-	pop1.image({
-		start:'9.1', // Our start time in seconds
-		end:'12', // Our end time in seconds
-		src: "img/cat.jpg",
-		target:'container', // What DOM element we want to target on the page
+pop.image({
+		start:'7', // Our start time in seconds
+		end:'9', // Our end time in seconds
+		src: "assets/Horn_Video/vietnam.png",
+		target:'box2', // What DOM element we want to target on the page
 		effect: "applyclass", // Apply a CSS class to the target container
-		/* applyclass: "flip, black, move_down", // Specify which CSS class */
-	});
-
-	pop1.googlemap({
+		applyclass: "vietnam_map", // Specify which CSS class */
+	});	
+		
+	/*
+pop.googlemap({
 		start: 13,
 		end: 19,
 		type: "ROADMAP",
 		target: "box",
-		lat: -27.916767,
-		lng: 31.157227,
+		lat: 43.665429,
+		lng: -79.403323,
 		zoom: 5,
-		})		
-/*
-	pop1.webpage({ 
-		id: "webpages-a",
-		start: 19.1,
-		end: 25,
-		src: "http://itp.nyu.edu/itp/",
-		target: "container"
 	});
 
-}); */
+*/
+	pop.footnote({
+        start: 55,
+    	end: 63,
+    	target: "timeline",
+        text: "<a href='http://www.nytimes.com/1993/06/06/world/beijing-bans-trade-in-rhino-and-tiger-parts.html' target=_blank>Beijing Bans Trade in Rhino Horn</a>",
+
+	});
+	
+pop.image({
+		start:'58', // Our start time in seconds
+		end:'63', // Our end time in seconds
+		src: "assets/arrow.jpg",
+		target:'arrow', // What DOM element we want to target on the page
+		effect: "applyclass", // Apply a CSS class to the target container
+	});	
+
+pop.footnote({
+        start: 0,
+    	end: 5,
+    	target: "button",
+        text: "<a href='#' onclick='video.play();'>Keep Watching</a>",
+	});
+
+
+pop.googlefeed({
+		start: '0',
+		end: '20',
+		target: 'feed',
+		url: "http://www.nationalgeographic.com/search/?frontend=default_frontend&output_format=xml_no_dtd&num_results=25&filter=p&collection=default_collection&meta_field_to_return=ngs-gsa-feed-title&meta_field_to_return=ngs-gsa-feed-slug&meta_field_to_return=ngs-gsa-feed-description&meta_field_to_return=ngs-gsa-feed-keywords&meta_field_to_return=ngs-gsa-feed-thumbnail&required_meta_field_1=ngs-gsa-feed-mediaType%3Avideo&required_meta_field=ngs-gsa-feed-video-source%3Aanimals%7Cngs-gsa-feed-video-source%3Aenvironment%7Cngs-gsa-feed-video-source%3Amovies%7Cngs-gsa-feed-video-source%3Amusic%7Cngs-gsa-feed-video-source%3Anews%7Cngs-gsa-feed-video-source%3Aplaces%7Cngs-gsa-feed-video-source%3Aspecials%7Cngs-gsa-feed-video-source%3Ascience%7Cngs-gsa-feed-video-source%3Anat-geo-wild%7Cngs-gsa-feed-video-source%3Anational-geographic-channel%7Cngs-gsa-feed-video-source%3Akids%7Cngs-gsa-feed-video-source%3Athe-magazine&meta_field_filter=ngs-gsa-feed-title&meta_field_filter=ngs-gsa-feed-description&meta_field_filter=ngs-gsa-feed-keywords&oe=utf-8&search=rhinos&btnG=Go&start=0&sort=",
+		title: "Rhino News",
+		orientation: "Vertical",
+});
+/* WHY IS THIS NOT WORKING?!?! 
+pop.webpage({
+		id: "webpages-a",
+		start: 0,
+		end: 40,
+		src: "http://www.nationalgeographic.com/search/?frontend=default_frontend&output_format=xml_no_dtd&num_results=25&filter=p&collection=default_collection&meta_field_to_return=ngs-gsa-feed-title&meta_field_to_return=ngs-gsa-feed-slug&meta_field_to_return=ngs-gsa-feed-description&meta_field_to_return=ngs-gsa-feed-keywords&meta_field_to_return=ngs-gsa-feed-thumbnail&required_meta_field_1=ngs-gsa-feed-mediaType%3Avideo&required_meta_field=ngs-gsa-feed-video-source%3Aanimals%7Cngs-gsa-feed-video-source%3Aenvironment%7Cngs-gsa-feed-video-source%3Amovies%7Cngs-gsa-feed-video-source%3Amusic%7Cngs-gsa-feed-video-source%3Anews%7Cngs-gsa-feed-video-source%3Aplaces%7Cngs-gsa-feed-video-source%3Aspecials%7Cngs-gsa-feed-video-source%3Ascience%7Cngs-gsa-feed-video-source%3Anat-geo-wild%7Cngs-gsa-feed-video-source%3Anational-geographic-channel%7Cngs-gsa-feed-video-source%3Akids%7Cngs-gsa-feed-video-source%3Athe-magazine&meta_field_filter=ngs-gsa-feed-title&meta_field_filter=ngs-gsa-feed-description&meta_field_filter=ngs-gsa-feed-keywords&oe=utf-8&search=rhinos&btnG=Go&start=0&sort="
+		target: "box"
+});
+*/	
+
+pop.cue( 1, function() {
+  pop.pause();
+});	
+
+});
+
 </script>
+
 </head>
 
 <!-- The Body -->
 
 <body>	
 
+
 <!-- The Container -->
 
 	<div id="container">
-	
-	
-<!--The Video-->		
+<header>
+<div id="logo"><a href="" ><img src="assets/logo.png" alt="logo" width="90" /></a></div>
+<nav>
+<ul>
+<li><a href="index.html" class="active">HOME</a></li>
+<li><a href="about.html" style="border-right:0px;">ABOUT</a></li>
+</ul>
+</nav>
+</header>	
+<div id="mainContent">	
 
-		<video id="video" controls width= "600px">
-  			<source src="video/Main_Video/Intro_part1.mov">
-  	
+<!--The Video-->
+
+<!--<button id="button2" onclick="document.getElementById('container4video2').className = 'showvideo'; video2.play();">narf</button>-->
+
+<div id="button">
+</div>
+
+<div id="button2"> <a href='#' onclick="document.getElementById('container4video2').className = 'showvideo'; video2.play();">Meet Thembi</a></div>
+
+<div id="leftContent">
+
+		<video id="video" width="800" controls autoplay>
+  			<source src="video/Web_Formats/FinalEdit_All.mp4">
+  			<source src="video/Web_Formats/FinalEdit_All.webm">
 		</video>
 
-<!--The Content Box-->
 
-		<div id="box">
+<!--end LeftContent-->
+</div>
+<div id="rightContent">
+		
+<div id="container4video2" class="hiddenvideo">		
+<video id="video2" width="300" controls>
+	<source src="video/Web_Formats/Intro_part1.webmhd.webm">
+</video>
+</div>
+		
+<div id="box">
 		
 		</div>
+		
+		<div id="box2">
+		
+		</div>
+<div id="timeline">
+</div>
+<div id="arrow">
+</div>
+<div id="feed">
+</div>
+
+
+<!-- End rightContent -->
+</div>
+<div class="clear"></div>
+
+<!-- End mainContent -->
+</div>	
+
+<div id="PictoBrowser130306000126">Get the flash player here: http://www.adobe.com/flashplayer</div><script type="text/javascript" src="http://www.db798.com/pictobrowser/swfobject.js"></script><script type="text/javascript"> var so = new SWFObject("http://www.db798.com/pictobrowser.swf", "PictoBrowser", "500", "500", "8", "#EEEEEE"); so.addVariable("source", "groups"); so.addVariable("names", "Flickr Rhino Watch"); so.addVariable("userName", "vjoho"); so.addVariable("userId", "93781487@N05"); so.addVariable("ids", "1967072@N23"); so.addVariable("titles", "on"); so.addVariable("displayNotes", "on"); so.addVariable("thumbAutoHide", "off"); so.addVariable("imageSize", "medium"); so.addVariable("vAlign", "mid"); so.addVariable("vertOffset", "0"); so.addVariable("colorHexVar", "EEEEEE"); so.addVariable("initialScale", "off"); so.addVariable("bgAlpha", "90"); so.write("PictoBrowser130306000126");	</script>
+<br />
+			
+<footer>
+<ul>
+<li><a href="index.html" style="border-right:1px solid #000;">Home</a></li>
+<li><a href="about.html">About</a></li><br />
+<li><a href="about.html">Copyright @ 2013. The Rhino Wars</a></li>
+</ul>		
+</footer>
+
 
 <!-- End Container -->
+</div>	
 
-	</div>	
 
 <!-- End Body -->
 
