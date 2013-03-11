@@ -15,22 +15,34 @@
 <script>
 document.addEventListener("DOMContentLoaded", function () {
     var pop = Popcorn("#video");
+	
+pop.image({
+		start:'26', // Our start time in seconds
+		end:'35', // Our end time in seconds
+		src: "assets/RhinoSpecies.png",
+		target:'rightContent', // What DOM element we want to target on the page
+	});
 
 pop.image({
-		start:'6.25', // Our start time in seconds
-		end:'9', // Our end time in seconds
-		src: "assets/Horn_Video/china.png",
-		target:'box', // What DOM element we want to target on the page
-		effect: "applyclass", // Apply a CSS class to the target container
+		start: 58,
+		end: 65,
+		src: "assets/smuggledhorns.jpg",
+		target:'box',
 	});
+
 pop.image({
-		start:'7', // Our start time in seconds
-		end:'9', // Our end time in seconds
-		src: "assets/Horn_Video/vietnam.png",
-		target:'box2', // What DOM element we want to target on the page
-		effect: "applyclass", // Apply a CSS class to the target container
-		applyclass: "vietnam_map", // Specify which CSS class */
-	});	
+		start: 126,
+		end: 137,
+		src: "assets/krugerparkmap.png",
+		target:'box',
+	});
+
+pop.footnote({
+        start: 173,
+    	end: 178,
+    	target: "timeline",
+        text: "<a href='http://www.nytimes.com/2013/01/01/world/africa/central-africas-wildlife-rangers-face-deadly-risks.html' target=_blank>Check out this NYTimes article for more information on how park rangers work in the face of danger every day, confronting poachers that willing to not just kill animals.</a>",
+	});
 		
 	/*
 pop.googlemap({
@@ -42,24 +54,41 @@ pop.googlemap({
 		lng: -79.403323,
 		zoom: 5,
 	});
-
 */
+
+pop.image({
+		start: 183.25, // Our start time in seconds
+		end: 190, // Our end time in seconds
+		src: "assets/china.png",
+		target:'box', // What DOM element we want to target on the page
+		effect: "applyclass", // Apply a CSS class to the target container
+	});
+
+pop.image({
+		start: 184 , // Our start time in seconds
+		end: 190, // Our end time in seconds
+		src: "assets/vietnam.png",
+		target:'box2', // What DOM element we want to target on the page
+		effect: "applyclass", // Apply a CSS class to the target container
+		applyclass: "vietnam_map", // Specify which CSS class */
+	});	
+
 	pop.footnote({
-        start: 55,
-    	end: 63,
+        start: 226,
+    	end: 240,
     	target: "timeline",
         text: "<a href='http://www.nytimes.com/1993/06/06/world/beijing-bans-trade-in-rhino-and-tiger-parts.html' target=_blank>Beijing Bans Trade in Rhino Horn</a>",
-
 	});
 	
 pop.image({
-		start:'58', // Our start time in seconds
-		end:'63', // Our end time in seconds
+		start: 227, // Our start time in seconds
+		end: 240 , // Our end time in seconds
 		src: "assets/arrow.jpg",
 		target:'arrow', // What DOM element we want to target on the page
 		effect: "applyclass", // Apply a CSS class to the target container
 	});	
 
+/*
 pop.footnote({
         start: 0,
     	end: 5,
@@ -67,28 +96,10 @@ pop.footnote({
         text: "<a href='#' onclick='video.play();'>Keep Watching</a>",
 	});
 
-
-pop.googlefeed({
-		start: '0',
-		end: '20',
-		target: 'feed',
-		url: "http://www.nationalgeographic.com/search/?frontend=default_frontend&output_format=xml_no_dtd&num_results=25&filter=p&collection=default_collection&meta_field_to_return=ngs-gsa-feed-title&meta_field_to_return=ngs-gsa-feed-slug&meta_field_to_return=ngs-gsa-feed-description&meta_field_to_return=ngs-gsa-feed-keywords&meta_field_to_return=ngs-gsa-feed-thumbnail&required_meta_field_1=ngs-gsa-feed-mediaType%3Avideo&required_meta_field=ngs-gsa-feed-video-source%3Aanimals%7Cngs-gsa-feed-video-source%3Aenvironment%7Cngs-gsa-feed-video-source%3Amovies%7Cngs-gsa-feed-video-source%3Amusic%7Cngs-gsa-feed-video-source%3Anews%7Cngs-gsa-feed-video-source%3Aplaces%7Cngs-gsa-feed-video-source%3Aspecials%7Cngs-gsa-feed-video-source%3Ascience%7Cngs-gsa-feed-video-source%3Anat-geo-wild%7Cngs-gsa-feed-video-source%3Anational-geographic-channel%7Cngs-gsa-feed-video-source%3Akids%7Cngs-gsa-feed-video-source%3Athe-magazine&meta_field_filter=ngs-gsa-feed-title&meta_field_filter=ngs-gsa-feed-description&meta_field_filter=ngs-gsa-feed-keywords&oe=utf-8&search=rhinos&btnG=Go&start=0&sort=",
-		title: "Rhino News",
-		orientation: "Vertical",
-});
-/* WHY IS THIS NOT WORKING?!?! 
-pop.webpage({
-		id: "webpages-a",
-		start: 0,
-		end: 40,
-		src: "http://www.nationalgeographic.com/search/?frontend=default_frontend&output_format=xml_no_dtd&num_results=25&filter=p&collection=default_collection&meta_field_to_return=ngs-gsa-feed-title&meta_field_to_return=ngs-gsa-feed-slug&meta_field_to_return=ngs-gsa-feed-description&meta_field_to_return=ngs-gsa-feed-keywords&meta_field_to_return=ngs-gsa-feed-thumbnail&required_meta_field_1=ngs-gsa-feed-mediaType%3Avideo&required_meta_field=ngs-gsa-feed-video-source%3Aanimals%7Cngs-gsa-feed-video-source%3Aenvironment%7Cngs-gsa-feed-video-source%3Amovies%7Cngs-gsa-feed-video-source%3Amusic%7Cngs-gsa-feed-video-source%3Anews%7Cngs-gsa-feed-video-source%3Aplaces%7Cngs-gsa-feed-video-source%3Aspecials%7Cngs-gsa-feed-video-source%3Ascience%7Cngs-gsa-feed-video-source%3Anat-geo-wild%7Cngs-gsa-feed-video-source%3Anational-geographic-channel%7Cngs-gsa-feed-video-source%3Akids%7Cngs-gsa-feed-video-source%3Athe-magazine&meta_field_filter=ngs-gsa-feed-title&meta_field_filter=ngs-gsa-feed-description&meta_field_filter=ngs-gsa-feed-keywords&oe=utf-8&search=rhinos&btnG=Go&start=0&sort="
-		target: "box"
-});
-*/	
-
 pop.cue( 1, function() {
   pop.pause();
 });	
+*/
 
 });
 
@@ -117,8 +128,6 @@ pop.cue( 1, function() {
 
 <!--The Video-->
 
-<!--<button id="button2" onclick="document.getElementById('container4video2').className = 'showvideo'; video2.play();">narf</button>-->
-
 <div id="button">
 </div>
 
@@ -138,24 +147,22 @@ pop.cue( 1, function() {
 		
 <div id="container4video2" class="hiddenvideo">		
 <video id="video2" width="300" controls>
-	<source src="video/Web_Formats/Intro_part1.webmhd.webm">
+	<source src="video/Web_Formats/ThembiVideo.mp4">
+	<source src="video/Web_Formats/ThembiVideo.webm">
 </video>
 </div>
 		
 <div id="box">
-		
 		</div>
 		
-		<div id="box2">
-		
+<div id="box2">
 		</div>
-<div id="timeline">
-</div>
-<div id="arrow">
-</div>
-<div id="feed">
-</div>
 
+<div id="timeline">
+		</div>
+
+<div id="arrow">
+		</div>
 
 <!-- End rightContent -->
 </div>
