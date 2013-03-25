@@ -1,0 +1,241 @@
+
+<!-- Master Version -->
+<!DOCTYPE html>
+<head>
+
+<!-- Link to Popcorn -->
+
+<script src="js/popcorn-complete.js"></script>
+
+<!-- The Style -->
+
+<link rel="stylesheet" href="css/style.css" />
+
+<!-- Pop the Corn -->
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    var pop = Popcorn("#video");
+	
+pop.image({
+		start:'26', // Our start time in seconds
+		end:'35', // Our end time in seconds
+		src: "assets/RhinoSpecies.png" ,
+		target:'species', // What DOM element we want to target on the page
+	});
+
+pop.image({
+		start: 58,
+		end: 65,
+		src: "assets/smuggledhorns.jpg",
+		target:'horn',
+	});
+
+pop.image({
+		start: 126,
+		end: 137,
+		src: "assets/krugerparkmap.png",
+		target:'box',
+	});
+
+pop.footnote({
+        start: 173,
+    	end: 178,
+    	target: "NYtimesText",
+        text: "Check out this NYTimes article for more information on how park rangers work in the face of danger every day, confronting poachers that willing to not just kill animals.<br/>",
+ 
+	});
+
+pop.footnote({
+        start: 173,
+    	end: 178,
+    	target: 'NYtimesLink',
+        text: "<a href='http://www.nytimes.com/2013/01/01/world/africa/central-africas-wildlife-rangers-face-deadly-risks.html' target=_blank> NYTimes article</a>",
+
+	});
+		
+	/*
+pop.googlemap({
+		start: 13,
+		end: 19,
+		type: "ROADMAP",
+		target: "box",
+		lat: 43.665429,
+		lng: -79.403323,
+		zoom: 5,
+	});
+*/
+
+pop.image({
+		start: 186, // Our start time in seconds
+		end: 190, // Our end time in seconds
+		src: "assets/china.png",
+		target:'box', // What DOM element we want to target on the page
+		effect: "applyclass", // Apply a CSS class to the target container
+	});
+
+pop.image({
+		start: 186.5 , // Our start time in seconds
+		end: 190, // Our end time in seconds
+		src: "assets/vietnam.png",
+		target:'box2', // What DOM element we want to target on the page
+		effect: "applyclass", // Apply a CSS class to the target container
+		applyclass: "vietnam_map", // Specify which CSS class */
+	});	
+
+pop.footnote({
+        start: 226,
+    	end: 240,
+    	target: 'timeline',
+		effect: "applyclass", // Apply a CSS class to the target container
+		applyclass: "timeline", // Specify which CSS class */
+        text: "<a href='http://www.nytimes.com/1993/06/06/world/beijing-bans-trade-in-rhino-and-tiger-parts.html' target=_blank></a>",
+	});
+pop.image({
+		start: 227, // Our start time in seconds
+		end: 240 , // Our end time in seconds
+		src: "assets/arrow.png",
+		target:'arrow', // What DOM element we want to target on the page
+		effect: "applyclass", // Apply a CSS class to the target container
+	});	
+	
+	
+pop.footnote({
+		start: 328, // Our start time in seconds
+		end: 335 , // Our end time in seconds
+		target:'thembi', // What DOM element we want to target on the page
+		effect: "applyclass", // Apply a CSS class to the target container
+		applyclass: "thembi", // Specify which CSS class */
+		text: "<a href='#ThembiRhino'></a>", // Apply a CSS class to the target container
+	});	
+
+	
+/*
+pop.footnote({
+        start: 0,
+    	end: 5,
+    	target: "button",
+        text: "<a href='#' onclick='video.play();'>Keep Watching</a>",
+	});
+
+pop.cue( 1, function() {
+  pop.pause();
+});	
+*/
+
+});
+
+</script>
+
+</head>
+
+<!-- The Body -->
+
+<body>	
+
+
+<!-- The Container -->
+<div id="border"></div>
+	<div id="container">
+<header>
+<div id="logo"><a href="" ><img src="assets/logo.png" alt="logo" width="300" /></a></div>
+<nav>
+<ul>
+<li><a href="index.html" class="active">HOME</a></li>
+<li><a href="about.html" >ABOUT</a></li>
+<li><a href="photos.html" >PHOTOS</a></li>
+</ul>
+</nav>
+</header>	
+
+<div id="mainContent">	
+
+<!--The Video-->
+
+<div id="button">
+</div>
+
+
+<div id="leftContent">
+
+		<video id="video" controls autoplay>
+  			<source src="video/Web_Formats/FinalEdit_All.mp4">
+  			<source src="video/Web_Formats/FinalEdit_All.webm">
+		</video>
+
+
+<!--end LeftContent-->
+</div>
+<div id="rightContent">
+<!-- 		
+<div id="container4video2" class="hiddenvideo">		
+<video id="video2" width="300" controls>
+	<source src="video/Web_Formats/ThembiVideo.mp4">
+	<source src="video/Web_Formats/ThembiVideo.webm">
+</video>
+</div>
+
+<div id="button2"> <a href='#' onclick="document.getElementById('container4video2').className = 'showvideo'; video2.play();">Meet Thembi</a></div>
+ -->		
+
+		
+<div id="species">
+		</div>
+<div id="horn">
+		</div>
+
+<div id="box">
+		</div>
+		
+<div id="box2">
+		</div>
+
+<div id="NYtimesText">
+
+</div>
+
+<div id="NYtimesLink">
+
+</div>
+<div id="timeline">
+		</div>
+
+<div id="arrow">
+		</div>
+
+<div id="thembi">
+		</div>
+
+<!-- End rightContent -->
+</div>
+<div class="clear"></div>
+
+<!-- End mainContent -->
+</div>	
+
+<div id="ThembiRhino">
+<video id="video2" width="700" controls>
+	<source src="video/Web_Formats/ThembiVideo.mp4">
+	<source src="video/Web_Formats/ThembiVideo.webm">
+</video>
+		</div>
+		
+<br />
+			
+<footer>
+<ul>
+<li><a href="index.html" style="border-right:1px solid #000;">Home</a></li>
+<li><a href="about.html" style="border-right:1px solid #000;">About</a></li>
+<li><a href="photos.html">Photos</a></li><br />
+<li><a>Copyright @ 2013. The Rhino Wars</a></li></ul>		
+</footer>
+
+
+<!-- End Container -->
+</div>	
+
+
+<!-- End Body -->
+
+</body>
+</html>

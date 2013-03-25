@@ -1,0 +1,328 @@
+
+body {
+background-image: url(../assets/background.jpg);
+   	width:100%;
+   	background-attachment: fixed;
+   	background-position: center top;
+   	}
+iframe {
+	width: 100%
+	height: 480px;
+}
+p {
+	font-size: 20px;
+   	font-family:sans-serif, helvetica;
+   	text-align: justify;
+}
+a {
+	text-decoration: none;
+   	font: helvetica;
+	
+}
+
+h1{
+	font-size: 30px;
+	color:#333 ;
+	font-family: sans-serif,helvetica ;
+	
+}
+.clear{
+	clear: both;
+}
+/* Page elements */
+#border{
+	border-top: 8px solid #748e70;
+	width: 1150px;
+	margin: -8px auto 0 auto;
+
+}
+#container {
+	margin: 0 auto;
+	width: 1050px;
+	-webkit-transition: all .5s ease-in-out;
+	-moz-transition: all .5s ease-in-out;
+	-o-transition: all .5s ease-in-out;
+	transition: all .5s ease-in-out;
+}
+
+#container img {
+	margin: 0px auto;
+}
+#container iframe {
+	max-width: 1050px;
+}
+#container video {
+	z-index: 2;
+	clear: both;
+	float: none;
+}
+#logo{
+	float: left;
+	margin:30px 0;
+}
+
+#mainContent{
+	border-top: 1px solid #000;
+	border-bottom: 1px solid #000;
+	margin-bottom: 30px;
+	position: relative;
+}
+
+header{
+position: relative;
+height: 200px;
+}
+#leftContent{
+	float: left;
+	width: 67%;
+}
+
+#rightContent{
+	float: right;
+	width:33%;
+}
+
+nav{	
+	margin: 0;
+	padding: 0;
+}
+nav ul{
+	float: right;
+	margin-top:80px;
+}
+nav ul li{
+	padding-left: 18px;
+	display: inline;
+	background-color:#748e70;
+-moz-border-radius: 20px;
+   -webkit-border-radius: 20px;
+    border-radius: 20px;
+    padding:20px 15px;
+    margin-right:5px;
+
+}
+nav ul li a{
+	list-style: none;
+    color: white;
+	font-size: 18px;
+	font-family: Helvetica, sans-serif;
+}
+
+footer{
+	margin: 0: 
+	padding: 0;
+	border-top: 8px solid #748e70;
+
+}
+footer ul li{
+	display: inline;
+}
+
+footer ul li a{
+	padding-right: 7px;
+	color: #000;
+	font-size: 12px;
+}
+#species{
+	width: 150px;
+}
+#species img{
+width: 340px;
+margin-top: 58px;
+margin-left: 10px;
+}
+#horn{
+	margin: 60px 15px 0 25px;
+}
+#horn img{
+width: 300px;
+}
+#box {
+	color: white;
+	float: right;
+	top:0;
+	-webkit-transition: all .5s ease-in-out;
+	-moz-transition: all .5s ease-in-out;
+	-o-transition: all .5s ease-in-out;
+	transition: all .5s ease-in-out;
+	margin: 0px 30px 0;
+}
+#box img {
+	z-index: 20 !important;
+	max-height: 250px;
+	
+}
+
+#box2, #vietnam_map {
+	color: white;
+	float: right;
+	-webkit-transition: all .5s ease-in-out;
+	-moz-transition: all .5s ease-in-out;
+	-o-transition: all .5s ease-in-out;
+	transition: all .5s ease-in-out;
+	margin: -37px 55px 0 ;
+}
+
+#box2 img {
+	max-height: 230px;
+	z-index: 1 !important;
+}
+
+
+
+#button2{
+	margin-right: 100px;
+	margin-top: 15px;
+	float: right;
+	
+	}
+#button2 a{
+	color: #fff;
+	background: #9cb398;
+	background: -webkit-gradient(linear, left top, left bottom, from(#c1ebbb), to(#677764));
+	background: -moz-linear-gradient(top, #c1ebbb 0%, #677764 100%);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#c1ebbb', endColorstr='##677764');
+    -moz-border-radius: 20px;
+   -webkit-border-radius: 20px;
+    border-radius: 20px;
+    padding: 10px 15px;
+    text-align: center;
+    -webkit-box-shadow: 0 3px 3px rgba(0,0,0,.2);
+	-moz-box-shadow: 0 3px 3px rgba(0,0,0,.2);
+	box-shadow: 0 3px 3px rgba(0,0,0,.2);
+}
+
+#NYtimesLink{
+	margin-top: 50px;
+	margin-left: 15px;
+}
+#timeline a{
+background-image: url(../assets/btn2.png);
+background-repeat: no-repeat;
+display: block;
+padding: 15px 17px;
+text-decoration: none;
+color: #000;
+height: 30px;	
+margin-left: 50px;
+width: 150px;
+font-family: helvetica, sans-serif;
+font-size: 16px;
+background-color: ;
+}
+
+#ThembiRhino{
+	margin-top: 30px;
+}
+
+#thembi a{
+background-image: url(../assets/btn1.png);
+background-repeat: no-repeat;
+display: block;
+padding: 12px 35px;
+text-decoration: none;
+color: #000;
+height: 30px;	
+margin-left: 50px;
+font-family: helvetica, sans-serif;
+font-size: 16px;
+width: 100px;
+background-color: ;
+	}
+
+
+#NYtimesLink a{
+	color: #fff;
+	background: #9cb398;
+	background: -webkit-gradient(linear, left top, left bottom, from(#c1ebbb), to(#677764));
+	background: -moz-linear-gradient(top, #c1ebbb 0%, #677764 100%);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#c1ebbb', endColorstr='##677764');
+    -moz-border-radius: 20px;
+   -webkit-border-radius: 20px;
+    border-radius: 20px;
+    padding: 10px 15px;
+    text-align: center;
+    -webkit-box-shadow: 0 3px 3px rgba(0,0,0,.2);
+	-moz-box-shadow: 0 3px 3px rgba(0,0,0,.2);
+	box-shadow: 0 3px 3px rgba(0,0,0,.2);
+	width: 100%;
+}
+
+#NYtimesText{
+	color: #000;
+	font:14px normal sans-serif;
+	font-family: helvetica;
+	padding-left: 15px;
+}
+#arrow img{
+top:0;
+margin-left: 90px;
+position: absolute;}
+
+
+#video{
+	margin: 60px 0;
+	width: 700px;
+	z-index: 1;
+	position: relative;
+}
+
+#video2, #video3{
+margin: 20px 5px;
+}
+
+#feed{
+	margin: 20px;
+	width: 200px;
+	height: 600px;
+	position: relative;
+}
+
+/* Some classes */
+
+.black {
+	background-color: black;
+}
+.verdana {
+	font-family: verdana;
+}
+.move_down {
+	margin-top: 200px;
+}
+
+.hiddenvideo {
+	display: none;
+}
+
+.showvideo {
+display: block; !important
+}
+
+/* Fun effects */
+
+.scale {
+	transform: scale(2,2);
+	-ms-transform: scale(2,2); /* IE 9 */
+	-webkit-transform: scale(2,2); /* Safari and Chrome */
+	-o-transform: scale(2,2); /* Opera */
+	-moz-transform: scale(2,2); /* Firefox */
+}
+.translate {
+	transform: translate(50px,100px);
+	-ms-transform: translate(50px,100px); /* IE 9 */
+	-webkit-transform: translate(50px,100px); /* Safari and Chrome */
+	-o-transform: translate(50px,100px); /* Opera */
+	-moz-transform: translate(50px,100px); /* Firefox */
+}
+.skew {
+	transform: skew(30deg,20deg);
+	-ms-transform: skew(30deg,20deg); /* IE 9 */
+	-webkit-transform: skew(30deg,20deg); /* Safari and Chrome */
+	-o-transform: skew(30deg,20deg); /* Opera */
+	-moz-transform: skew(30deg,20deg); /* Firefox */
+}
+.flip {
+	transform: rotateY(360deg);
+	-webkit-transform: rotateY(360deg); /* Safari and Chrome */
+	-moz-transform: rotateY(360deg); /* Firefox */
+}
